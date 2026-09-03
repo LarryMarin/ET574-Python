@@ -16,3 +16,5 @@ print("Items\t\tPrice\n----------\t--------\nApple\t\t$1.75\nBanana\t\t$2.25\nCh
 
 #4. Write one print statement to display the following quote.
 print('Albert Einstein once said,\n"A person who never made a mistake\nnever tried anything new."')
+
+print("Yo")
