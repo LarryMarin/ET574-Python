@@ -12,7 +12,7 @@ print("Major: Cybersecurity", end = '')
 print("\tEmail: larrymarin80@gmail.com")
 
 #3. Print the following text to the console by using ‘\t’ and ‘\n’ syntax.
-print("Items\t\tPrice\n----------\t--------\nApple\t\t$1.75\nBanana\t\t$2.25\nChery\t\t$3.50\n----------\t--------\nTotal\t\t$7.50")
+print("Items\t\tPrice\n----------\t--------\nApple\t\t$1.75\nBanana\t\t$2.25\nCherry\t\t$3.50\n----------\t--------\nTotal\t\t$7.50")
 
 #4. Write one print statement to display the following quote.
 print('Albert Einstein once said,\n"A person who never made a mistake\nnever tried anything new."')
