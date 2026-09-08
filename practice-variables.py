@@ -6,6 +6,7 @@ markdown = discountPrice/100 * price
 price -= markdown
 #price, discountPrice = 99.99, 25 #cannot add markdown since discountPrice and price haven't been initialized yet 
 print("Price = {0:1.2f}".format(price))
+#print("Price = ", round(price, 2)) #this is another way we can do it
 
 #2. Gas Mileage
 
