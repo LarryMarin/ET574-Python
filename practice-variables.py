@@ -4,7 +4,7 @@ price = 99.99
 discountPrice = 25
 markdown = discountPrice/100 * price
 price -= markdown
-#price, discountPrice = 99.99, 25 #cannot add markdown since discountPrice and price havent been initialized yet 
+#price, discountPrice = 99.99, 25 #cannot add markdown since discountPrice and price haven't been initialized yet 
 print("Price = {0:1.2f}".format(price))
 
 #2. Gas Mileage
@@ -28,4 +28,9 @@ print("Answer: {0:1.3f} Miles/Gallon".format(distanceTraveled/gallons))
 #4 Integer Portion of a Floating-Point Number
 
 num = float(input("Enter a floating point number: "))
-print("The decimal portion is: {0:1.3f}".format(num))
+print("The decimal portion is: {0:1.0f}".format(num))
+
+#5 Decimal Portion of a Floating-Point Number
+
+num2 = float(input("Enter a floating point number: "))
+print("The decimal portion is: {0:1.0f}".format(num))
