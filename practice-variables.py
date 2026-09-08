@@ -34,4 +34,22 @@ print("The decimal portion is: {0:1.0f}".format(num))
 #5 Decimal Portion of a Floating-Point Number
 
 num2 = float(input("Enter a floating point number: "))
-print("The decimal portion is: {0:1.0f}".format(num))
+print("The decimal portion is: ", round(num2%1, 3))
+
+#6 Calculate's the amount of a server's tip.
+
+billAmount = float(input("Enter the amount of the bill: "))
+percentageTip = int(input("Enter the percentage of tip: "))
+print("Tip: ", round(billAmount * percentageTip/100, 2))
+
+#7 Sort three input numbers.
+
+var1 = int(input("Please enter the first integer: "))
+var2 = int(input("Please enter the second integer: "))
+var3 = int(input("Please enter the third integer: "))
+
+print("Before sorting: ", var1, var2, var3)
+minVar = min(var1, var2, var3)
+maxVar = max(var1, var2, var3)
+midVar = ((var1 + var2 + var3) - minVar) - maxVar
+print("After sorting: ", minVar, midVar, maxVar)
