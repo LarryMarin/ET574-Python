@@ -43,10 +43,12 @@ percentageTip = int(input("Enter the percentage of tip: "))
 print("Tip: ", round(billAmount * percentageTip/100, 2))
 
 #7 Sort three input numbers.
-
-var1 = int(input("Please enter the first integer: "))
-var2 = int(input("Please enter the second integer: "))
-var3 = int(input("Please enter the third integer: "))
+try:
+    var1 = int(input("Please enter the first integer: "))
+    var2 = int(input("Please enter the second integer: "))
+    var3 = int(input("Please enter the third integer: "))
+except:
+    print("Exceptions: Invalid input.")
 
 print("Before sorting: ", var1, var2, var3)
 minVar = min(var1, var2, var3)
