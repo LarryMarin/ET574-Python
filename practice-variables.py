@@ -15,16 +15,17 @@ filling2 = 23678
 gallons = 10
 #filling1, filling2, gallons = 23456, 23678, 10
 distanceTraveled = filling2 - filling1
-print("Distance traveled: {} Miles".format(distanceTraveled))
+#print("Distance traveled: {} Miles".format(distanceTraveled))
+print(f"Distance traveled: {distanceTraveled} Mile.")
 print("Gallons used = {}".format(gallons))
 print("How many miles per gallon did the car average between two fillings?")
 print("Answer: {0:1.3f} Miles/Gallon".format(distanceTraveled/gallons))
 
 #3 Rectangle Area Calculator
 
-#length = float(input("What is the length of the rectangle? "))
-#width = float(input("What is the width of the rectangle? "))
-#print("The rectangle's area is {0:1.3f}".format(length * width))
+length = float(input("What is the length of the rectangle? "))
+width = float(input("What is the width of the rectangle? "))
+print("The rectangle's area is {0:1.3f}".format(length * width))
 
 #4 Integer Portion of a Floating-Point Number
 
@@ -40,7 +41,8 @@ print("The decimal portion is: ", round(num2%1, 3))
 
 billAmount = float(input("Enter the amount of the bill: "))
 percentageTip = int(input("Enter the percentage of tip: "))
-print("Tip: ", round(billAmount * percentageTip/100, 2))
+tip = billAmount * percentageTip/100
+print(f"Tip: ${tip:.2f}")
 
 #7 Sort three input numbers.
 try:
