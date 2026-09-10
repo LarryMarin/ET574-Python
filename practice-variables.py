@@ -5,7 +5,8 @@ discountPrice = 25
 markdown = discountPrice/100 * price
 price -= markdown
 #price, discountPrice = 99.99, 25 #cannot add markdown since discountPrice and price haven't been initialized yet 
-print("Price = {0:1.2f}".format(price))
+#print("Price = {0:1.2f}".format(price))
+print(f"Price = {price:.2f}")
 #print("Price = ", round(price, 2)) #this is another way we can do it
 
 #2. Gas Mileage
@@ -19,23 +20,27 @@ distanceTraveled = filling2 - filling1
 print(f"Distance traveled: {distanceTraveled} Mile.")
 print("Gallons used = {}".format(gallons))
 print("How many miles per gallon did the car average between two fillings?")
-print("Answer: {0:1.3f} Miles/Gallon".format(distanceTraveled/gallons))
+#print("Answer: {0:1.3f} Miles/Gallon".format(distanceTraveled/gallons))
+print(f"Answer: {distanceTraveled/gallons:.3f} Miles/Gallon")
 
 #3 Rectangle Area Calculator
 
 length = float(input("What is the length of the rectangle? "))
 width = float(input("What is the width of the rectangle? "))
-print("The rectangle's area is {0:1.3f}".format(length * width))
+#print("The rectangle's area is {0:1.3f}".format(length * width))
+print(f"The rectangle's are is {length * width:.3f}")
 
 #4 Integer Portion of a Floating-Point Number
 
 num = float(input("Enter a floating point number: "))
-print("The decimal portion is: {0:1.0f}".format(num))
+#print("The decimal portion is: {0:1.0f}".format(num))
+print(f"The decimal portion is: {num:.0f}")
 
 #5 Decimal Portion of a Floating-Point Number
 
 num2 = float(input("Enter a floating point number: "))
-print("The decimal portion is: ", round(num2%1, 3))
+#print("The decimal portion is: ", round(num2%1, 3))
+print(f"The decimal portion is: {num2%1:.3f}")
 
 #6 Calculate's the amount of a server's tip.
 
