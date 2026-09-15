@@ -18,5 +18,7 @@ print(courses.upper())
 #2 Using String and Slicing Methods
 email = "mjordan@nba.com"
 print(email[::1])
-x = email.find("mjordan")
-print("User name: ", email[::x])
+x = email.find("@")
+print("User name: ", email[0:x])
+y = email.rfind(".com")
+print("Company name: ", email[x+1:y].upper())
