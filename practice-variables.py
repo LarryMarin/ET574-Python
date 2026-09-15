@@ -54,11 +54,11 @@ try:
     var1 = int(input("Please enter the first integer: "))
     var2 = int(input("Please enter the second integer: "))
     var3 = int(input("Please enter the third integer: "))
+
+    print("Before sorting: ", var1, var2, var3)
+    minVar = min(var1, var2, var3)
+    maxVar = max(var1, var2, var3)
+    midVar = ((var1 + var2 + var3) - minVar) - maxVar
+    print("After sorting: ", minVar, midVar, maxVar)
 except:
     print("Exceptions: Invalid input.")
-
-print("Before sorting: ", var1, var2, var3)
-minVar = min(var1, var2, var3)
-maxVar = max(var1, var2, var3)
-midVar = ((var1 + var2 + var3) - minVar) - maxVar
-print("After sorting: ", minVar, midVar, maxVar)
