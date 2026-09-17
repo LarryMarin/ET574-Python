@@ -23,27 +23,27 @@
 # y = email.rfind(".com")
 # print("Company name: ", email[x+1:y].upper())
 
-# #3 Using string indices.
-# # 1) Prompt and request an input string from the console.
-# # 2) Display the first and last letter of the string
-# # 3) Display the string in the reverse order
+#3 Using string indices.
+# 1) Prompt and request an input string from the console.
+# 2) Display the first and last letter of the string
+# 3) Display the string in the reverse order
 
-# userString = input("Please enter a string: ")
-# print("Original Text: ", userString)
-# print("First Letter:", userString[0])
-# print("Last Letter:", userString[-1])
-# print("Reverse Order:", userString[::-1])
+userString = input("Please enter a string: ")
+print("Original Text: ", userString)
+print("First Letter:", userString[0])
+print("Last Letter:", userString[-1])
+print("Reverse Order:", userString[::-1])
 
 #4 Display the following triangle by using repetition of “ ” and “*” 
 
 print(" "*7, "*", " "*7)
-print(" "*6, "***", " "*6)
-print(" "*5, "*****", " "*5)
-print(" "*4, "********", " "*4)
-print(" "*3, "**********", " "*3)
-print(" "*2, "************", " "*2)
-print(" "*1, "**************", " "*1)
-print(" "*0, "****************", " "*0)
+print(" "*6, "*"*3, " "*6)
+print(" "*5, "*"*5, " "*5)
+print(" "*4, "*"*7, " "*4)
+print(" "*3, "*"*9, " "*3)
+print(" "*2, "*"*11, " "*2)
+print(" "*1, "*"*13, " "*1)
+print(" "*0, "*"*15, " "*0)
 
 #5a – i, identify the errors of each question in the comment and rewrite the statement in the correct syntax
 
@@ -103,5 +103,4 @@ print("Reversed Text:", input1[::-1])
 
 age = int(input("Enter your age: "))
 print("Next year you will be", (age+1))
-
 
