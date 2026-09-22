@@ -107,4 +107,10 @@ print("Next year you will be", (age+1))
 x = '0123456789'
 #print 574 using the index
 print(x[5]+x[7]+x[4])
+#print 456
+print(x[4:7])
+#using find is better and consistent
+m = x.find('4')
+n = x.find('7')
+print(x[m:n])
 
