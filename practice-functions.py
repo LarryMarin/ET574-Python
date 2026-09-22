@@ -1,3 +1,6 @@
+import math
+import random
+import sys
 #1 Use math module
 # a) Use input() function to request any two numbers.
 # b) Use math module, fmod() to return the remainder of the user input.
@@ -42,6 +45,9 @@
 #         hello()
 #         n-=1
 
+#def helloNum(n):
+    # for i in range(n):
+    #     hello()
 # count = int(input("Please enter a counter: "))
 # helloNum(count)
 
