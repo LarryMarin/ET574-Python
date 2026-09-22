@@ -1,6 +1,3 @@
-import math
-import random
-import sys
 #1 Use math module
 # a) Use input() function to request any two numbers.
 # b) Use math module, fmod() to return the remainder of the user input.
@@ -80,14 +77,15 @@ import sys
 # last = ‘kennedy’, first = ‘john’, middle = ‘fitzgerald’
 # c) Call main() function to initiate the tasks to be performed
 
-# def nameFormat(first, middle, last):
-#     print(first.capitalize(), "", middle[0].capitalize() + ".", last.capitalize())
+def nameFormat(first, middle, last):
+    # print(first.capitalize(), "", middle[0].capitalize() + ".", last.capitalize())
+    print(first.title(), "", middle[0].title() + ".", last.title())
 
-# def main():
-#     nameFormat("John", "stu", "smith")
-#     nameFormat(last = 'kennedy', first = 'john', middle = 'fitzgerald')
+def main():
+    nameFormat("John", "stu", "smith")
+    nameFormat(last = 'kennedy', first = 'john', middle = 'fitzgerald')
 
-# main()
+main()
 
 #7 is the same as 6
 
@@ -104,27 +102,27 @@ import sys
 # 4) Handle all input and output.
 # c) Call main() function to initiate the tasks to be performed.
 
-def middle(l):
-    m = len(l)
-    #need to check if the length of m = 1. if it is needs to print [1] twice
-    if m == 1:
-        print("No change to made to the list")
-        print("List Length:", m)
-        print(l[:])
-        print(l[:])
-    else:
-        print("List Length:", m)
-        print(l[:])
-        print(l[1:m-1])
+# def middle(l):
+#     m = len(l)
+#     #need to check if the length of m = 1. if it is needs to print [1] twice
+#     if m == 1:
+#         print("No change to made to the list")
+#         print("List Length:", m)
+#         print(l[:])
+#         print(l[:])
+#     else:
+#         print("List Length:", m)
+#         print(l[:])
+#         print(l[1:m-1])
 
-def main():
-    #take the random number n. use a while loop while(i<=n) and i starting from 1 add it to the list
-    n = random.randint(1,10)
-    numlist = []
-    i = 1
-    while i<=n:
-        numlist.append(i)
-        i += 1
-    middle(numlist)
+# def main():
+#     #take the random number n. use a while loop while(i<=n) and i starting from 1 add it to the list
+#     n = random.randint(1,10)
+#     numlist = []
+#     i = 1
+#     while i<=n:
+#         numlist.append(i)
+#         i += 1
+#     middle(numlist)
 
-main()
+# main()
