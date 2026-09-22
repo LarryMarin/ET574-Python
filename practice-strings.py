@@ -104,3 +104,7 @@ print("Reversed Text:", input1[::-1])
 age = int(input("Enter your age: "))
 print("Next year you will be", (age+1))
 
+x = '0123456789'
+#print 574 using the index
+print(x[5]+x[7]+x[4])
+
