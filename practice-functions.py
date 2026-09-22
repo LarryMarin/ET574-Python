@@ -80,14 +80,14 @@ import sys
 # last = ‘kennedy’, first = ‘john’, middle = ‘fitzgerald’
 # c) Call main() function to initiate the tasks to be performed
 
-def nameFormat(first, middle, last):
-    print(first.capitalize(), "", middle[0].capitalize() + ".", last.capitalize())
+# def nameFormat(first, middle, last):
+#     print(first.capitalize(), "", middle[0].capitalize() + ".", last.capitalize())
 
-def main():
-    nameFormat("John", "stu", "smith")
-    nameFormat(last = 'kennedy', first = 'john', middle = 'fitzgerald')
+# def main():
+#     nameFormat("John", "stu", "smith")
+#     nameFormat(last = 'kennedy', first = 'john', middle = 'fitzgerald')
 
-main()
+# main()
 
 #7 is the same as 6
 
@@ -106,10 +106,25 @@ main()
 
 def middle(l):
     m = len(l)
-    print("List Length:", m)
-    print(l[:])
-    m = len(l)
-    print(l[2:m])
+    #need to check if the length of m = 1. if it is needs to print [1] twice
+    if m == 1:
+        print("No change to made to the list")
+        print("List Length:", m)
+        print(l[:])
+        print(l[:])
+    else:
+        print("List Length:", m)
+        print(l[:])
+        print(l[1:m-1])
 
 def main():
-    numList = 
+    #take the random number n. use a while loop while(i<=n) and i starting from 1 add it to the list
+    n = random.randint(1,10)
+    numlist = []
+    i = 1
+    while i<=n:
+        numlist.append(i)
+        i += 1
+    middle(numlist)
+
+main()
