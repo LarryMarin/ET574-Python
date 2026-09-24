@@ -85,3 +85,110 @@ del n
 # 5) Using slicing to print the first four classes.
 # 6) Using slicing to print the last four classes.
 # 7) Using slicing to print the classes except the first and last.
+
+courses = ["ET725", "ET581", "ET574", "ET506", "ET509"]
+print(courses)
+print("I am taking", len(courses), "courses.")
+print(courses[0], courses[-1])
+print(courses[0:4])
+print(courses[-4:])
+x = len(courses)
+print(courses[1:x-1])
+
+#3 Write a Python function named grade_statistics() that performs the following tasks:
+# 01) Create an empty list named grades inside the function.
+# 02) Add any five grades (including at least two grades below 60) one at a time to grades.
+# 03) Print the current list of grades in the format:
+# Current grades: [92, 51, 83, 37, 72]
+# 04) Calculate the total of these grades by indexing them into the list (do not use sum () yet)
+# 05) Use the total and the len () function to calculate the average.
+# 06) Print the average with two decimal places in the format:
+# Average: 67.00
+# 07) Remove all failing grades (lower than 60) using two different methods
+# a. Use the remove () method to delete one falling grade.
+# b. Use del statement to delete another falling grade.
+# 08) Print the updated list of grades in the format:
+# Updated grades: [92, 83, 72]
+# 09) Recalculate the average using the built-in functions, sum () and len ().
+# 10) Print the updated average with three decimal places in the format:
+# Updated Average: 82.333
+# 11) Call the function at the end of your program to display the results
+
+def grade_statistics():
+    grades = []
+    # grades.extend([100, 42, 56, 84, 73])
+    grades.append(100)
+    grades.append(42)
+    grades.append(56)
+    grades.append(84)
+    grades.append(73)
+    print("Current grades: ", grades)
+    gradeSum = 0
+    for grade in grades:
+        gradeSum += grade
+    average = gradeSum/len(grades)
+    print(f"Average: {average:.2f}")
+    grades.remove(42)
+    del grades[grades.index(56)]
+    print("Updated Grades: ", grades)
+    gradeSum = sum(grades)
+    average = gradeSum/len(grades)
+    print(f"Updated Average: {average:.3f}")
+grade_statistics()
+
+#4a. Write a Python program that analyzes a sentence using two functions.
+# 1) Define a function named get_sentence() that:
+# a. Prompts the user to enter a sentence using input().
+# b. Returns the sentence entered by the user.
+# 2) Define a function named analyze_sentence() that:
+# a. Accepts a sentence (string) as a parameter.
+# b. Splits the sentence into words using .split().
+# c. Counts the number of words using len().
+# d. Prints the result in the format:
+# 3) In your main program:
+# a. Call get_sentence() to retrieve the user’s sentence.
+# b. Pass the sentence as an argument to analyze_sentence().
+
+def getSentence():
+    userInput = input("Please enter a sentence: ")
+    return userInput
+
+def analyzeSentence(sentence=''):
+    splitSentence = sentence.split(' ')
+    print("Number of words:", len(splitSentence))
+sent = getSentence()
+analyzeSentence(sent)
+
+#4b. Write a Python program that analyzes a sentence using two functions.
+# 1) Define a function named get_sentence() that:
+# a. Prompts the user to enter a sentence using input().
+# b. Returns the sentence entered by the user.
+# 2) Define a function named analyze_sentence() that:
+# a. Accepts a sentence (string) as a parameter.
+# b. Splits the sentence into words using .split().
+# c. Counts the number of words using len().
+# d. Counts the total number of characters (excluding spaces).
+# e. Finds the longest word in the sentence.
+# f. Prints the result in the format:
+# 3) In your main program:
+# a. Call get_sentence() to retrieve the user’s sentence.
+# b. Pass the sentence as an argument to analyze_sentence().
+# Input text can be any content. Just make sure to precisely match the output format below.
+# Example Output
+# Enter a sentence: Python makes programming fun
+# Number of characters (excluding spaces): 26
+# Longest word: programming
+
+def get_sentence():
+    userInput = input("Please enter a sentence: ")
+    return userInput
+
+def analyze_sentence(sentence=''):
+    splitSentence = sentence.split(' ')
+    numChars = 0
+    for i in range(len(splitSentence)):
+         numChars += len(splitSentence[i])
+    print("Number of characters (exluding spaces):", numChars)
+
+sentence = get_sentence()
+analyze_sentence(sentence)
