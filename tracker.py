@@ -1,41 +1,79 @@
+import data
+
 #add_expense function
 #ask user for their name (make sure it is a valid name and not a number)
 #ask the user to put a description of their expense (make sure it is a valid String and not numbers)
 #to validate we can use try-except
 #ask the user to input an amount
 
-#all of this will be appended to a list in data.py
-#we may need to use 2D list for all of this. in a 2D list we can store multiple lists inside. look at list2examples folder
-#for 2D list examples
+def add_expense():
+    
+    name = input("Enter your name: ").strip()
+
+    while not name.replace(" ","").isalpha():
+        print("Invalid input. Please enter your name using letters.")
+        name = input("Enter your name: ").strip()
+
+    description = input("Expense description: ").strip()
+
+    while not description.replace(" ","").isalnum():
+        print("Invalid input. Please enter a description of your expense using letters, numbers and spaces.")
+        description = input("Expense description: ").strip()
+
+    while True:
+        try:
+            expense = float(input("Amount: "))
+
+            if expense <= 0:
+                print("Invalid amount. Please enter an amount greater than 0.")
+            else:
+                break
+
+        except ValueError:
+            print("Invalid amount. Please enter in dollars and cents.")
+
+    data.user_names.append(name)
+    data.expense_descriptions.append(description)
+    data.expense_costs.append(expense)
+
+    print(f"Your ${expense:.2f} {description} has been added successfully {name}!".title())
+
 
 #view_all_expenses function
-#we will print each item in the list (formatted correctly)
-#we can use a for loop to go through the entire list
-#since it is a 2D list we can use the index of the inner lists to print each item correctly
-#ex list = [[1,2,3], [4,5,6]]
-#in the for loop we can check the index for each item in the list [1,2,3] and print them out separately
+#prints out all current expenses in the list formatted correctly
+def view_all_expenses():
+    if not data.expense_costs:
+        print("No current expenses. Please add an expense.")
+        return
+    for index in range(len(data.expense_costs)):
+        print(f"Expense {index + 1}: ")
+        print(f"Name: {data.user_names[index].capitalize()}")
+        print(f"Expense Description: {data.expense_descriptions[index].capitalize()}")
+        print(f"Expense Amount: ${data.expense_costs[index]:.2f}", end = '\n\n')
 
 #split_summary function:
 #we ask the user to input the amount of people they want to split all the expenses in the list 
-#this number will be used to divide the total expenses later
+#it will print the total expenses, number of expenses, average expenses, highest expense, lowest expense, and equal share per person
 
-#we show the total of all expenses in the list:
-#we can use a for loop to go through the outer list
-#we check each inner list and check index 2 which will contain the expenses 
-#the user inputs 3 things so we know the index is 0-2 and the third thing they entered was expense (which will be index 2)
-#we can use format to print it out to 2 decimal places
+def split_summary():
+    if not data.expense_costs:
+        print("No current expenses. Please add an expense.")
+        return
+    while True:
+        try:
+            numToSplit = int(input("Please enter the amount of people you want to split the expenses with: "))
+            if numToSplit > 0:
+                break
+            else:
+                print("The number cannot be 0 or a negative number please try again.")
+        except ValueError:
+            print("Invalid Input.")
 
-#we can check the length of the outer list to get the number of expenses
-
-#once we get the total expenses and the length of the outer list we can get the average
-#avg = total_expenses / outerlist_length
-#we can then use format to print it out to 2 decimal places
-
-#while we go through the loop earlier to get the total expense we can check which if it is the highest expense every time and save it
-#maybe we can use the max() function from lists? if not then we can manually check with an if statement
-
-#lowest expense we can do the opposite of highest expense. check which is the lowest and save it. maybe we can use min() function
-#from lists?
-
-#for equal share we can divide the users input from earlier and divide total with it
-#total_expenses / num_of_people
+    allExpenses = data.expense_costs
+    
+    print(f"Total Expenses = ${sum(allExpenses):.2f}")
+    print(f"Number of Expenses = {len(allExpenses)}")
+    print(f"Average Expense = ${sum(allExpenses)/len(allExpenses):.2f}")
+    print(f"Highest Expense = ${max(allExpenses):.2f}")
+    print(f"Lowest Expense = ${min(allExpenses):.2f}")
+    print(f"Equal Share Per Person = ${sum(allExpenses)/numToSplit:.2f}")
