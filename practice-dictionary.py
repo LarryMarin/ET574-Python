@@ -3,14 +3,14 @@ stuInfo = {"name": "John Smith", "gpa": 3.456, "age": 20}
 
 # 2) Use a loop and the items() method to print all keys and values.
 for key, value in stuInfo.items():
-    print(key.title(), value)
+    print(key.upper(), '\t', value)
 
 # 3) Use the update() method to change the gpa to 4.0.
 stuInfo.update({"gpa": 4.0})
 
 # 4) Use a loop and the keys() method to print all keys and values
 for key in stuInfo.keys():
-    print(key.title(), stuInfo[key])
+    print(key.upper(), '\t', stuInfo[key])
 
 # 5) Add a key major with the value to the dictionary
 stuInfo["major"] = "CSIS"
@@ -42,3 +42,23 @@ if years in rank:
 
 else:
     print("Invalid years.")
+
+# 3a. Implement the following.
+# 1) Use a for loop to create a list with 26 letters (a-z).
+# 2) Use a for loop to create a list with 26 numbers from 1 to 26 inclusive.
+# 3) Create a dictionary, charNum by zipping above two lists.
+# 4) Use a for loop to print the keys and values in the dictionary as the output below
+
+letters = []
+for i in range(97,123):
+    letters.append(chr(i))
+
+numbers = []
+
+for i in range(1,27):
+    numbers.append(i)
+
+charNum = dict(zip(letters, numbers))
+
+for key, value in charNum.items():
+    print(key, value, end='|')
