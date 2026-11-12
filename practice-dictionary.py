@@ -35,13 +35,13 @@ print(stuInfo)
 
 rank = {1:"Freshman", 2:"Sophmore", 3:"Junior", 4:"Senior"}
 
-years = int(input("Enter the # of years in the school (1-4): "))
-
-if years in rank:
-    print(f"Years {years} = {rank[years]}")
-
-else:
-    print("Invalid years.")
+try:
+    years = int(input("Enter the # of years in the school (1-4): "))
+    print(f"Year {years} = {rank[years]}")
+except ValueError:
+    print("Invalid number. Please enter a valid number.")
+except KeyError:
+    print("Invalid number of years.")
 
 # 3a. Implement the following.
 # 1) Use a for loop to create a list with 26 letters (a-z).
